@@ -1,0 +1,230 @@
+
+=======ANOTAÇAO==========  
+
+Extensão opcional vs code
+
+Nigth Owl Black
+night Wolf
+python Environments
+Data Wrangler
+
+vscode icon
+
+============================
+
+
+
+
+
+
+=======ANOTAÇAO==========  
+GITHUB REMOTO
+Um repositório contém todos os arquivos do projeto. 
+
+Create a new repositor
+python_developer_qua_491_006
+
+Descrição (opcional)
+Curso Senai - Python Developer
+
+Público
+Qualquer pessoa na internet pode ver este repositório. Você escolhe quem pode fazer commits.
+
+Adicionar um arquivo README
+Aqui você pode escrever uma descrição longa para o seu projeto- 
+espécie de documentação do seu projeto
+
+.gitignore
+Selecione quais arquivos não serão rastreados em uma lista de modelos
+
+======================= 09/06/2025===================
+GIT -- LOCAL
+ctrl + j --- abrir terminal no VS CODE
+======================= 09/06/2025===================
+CRIAR REPOSITORIO LOCAL GIT -- LOCAL
+1º COLOCAR AS CREDENCIASI
+NOME 
+EMAIL
+=================================================================================
+Verificar se existe alguma credencial com o seguiente comando.
+PS C:\Users\ead\Aperfeiçoamento em Python> git config --global --list
+user.name=Enzo-gms
+user.email=enzogms07@gmail.com
+
+Usar este comando para eliminar as crendenciais 
+PS C:\Users\ead\Aperfeiçoamento em Python> git config --global --unset user.name
+PS C:\Users\ead\Aperfeiçoamento em Python> git config --global --unset user.email
+==================================================================================
+Verificar se as credenciais foram eliminadas
+PS C:\Users\ead\Aperfeiçoamento em Python> git config --global --list   
+
+Inserir as suas credenciais
+PS C:\Users\ead\Aperfeiçoamento em Python> git config --global user.name "ale09carvalho"
+PS C:\Users\ead\Aperfeiçoamento em Python> git config --global user.email "ale09.carvalho@gmail.com"
+---------------------------------------------------------------------------------------
+PS C:\Users\ead\Aperfeiçoamento em Python> git config --global user.name "ale09carvalho"
+PS C:\Users\ead\Aperfeiçoamento em Python> git config --global user.email "ale09.carvalho@gmail.com"
+
+PS C:\Users\ead\Aperfeiçoamento em Python> git config --global --list
+user.name=ale09carvalho
+user.email=ale09.carvalho@gmail.com
+======================================================================================
+O que vc não quer levar para repositório
+.gitignore ---> 
+não mexer nesta pasta vev
+=====================================================================================
+git status 
+
+criar um repositório - 
+git init
++====> (.venv) PS C:\Users\ead\PythonDeveloperQua491006\1_logica_programacao> git init
+Initialized empty Git repository in C:/Users/ead/PythonDeveloperQua491006/1_logica_programacao/.git/
+
+==============================================
+Criar o repositório local
+
+(.venv) PS C:\Users\ead\PythonDeveloperQua491006> git init  
+
+============================================================
+VERMELHO - Arquivos para serem enviado para área stage
+
+PS C:\Users\ead\PythonDeveloperQua491006\1_logica_programacao> git status
+On branch master
+No commits yet
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1_hello_world/
+        2_zen_do_python/
+        3_variaveis/
+        4_operadores/
+        5_input/
+=================================================
+OBSERVAÇAO: 
+a .venv não pode ir para repositório
+================================================
+ENVIAR PARA AREA STAGE - para ser comitado
+
+PS C:\Users\ead\PythonDeveloperQua491006\1_logica_programacao> git add .
+PS C:\Users\ead\PythonDeveloperQua491006\1_logica_programacao> git status
+=================================================
+VERDE
+Agora já estão na STAGE para commitar 
+On branch master
+No commits yet
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1_hello_world/main.py
+        new file:   2_zen_do_python/main.py
+        new file:   3_variaveis/main.py
+        new file:   3_variaveis/mainn.py
+        new file:   4_operadores/main.py
+        new file:   5_input/main.py
+=================================================
+git commit -m "primeiro commit" 
+ 
+PS C:\Users\ead\PythonDeveloperQua491006\1_logica_programacao> git commit -m "1º commit versao 1.0 aula 9/6/2025"  
+
+[master (root-commit) b9f93cf] 1º commit versao 1.0 aula 9/6/2025
+ 6 files changed, 151 insertions(+)
+ create mode 100644 1_hello_world/main.py
+ create mode 100644 2_zen_do_python/main.py
+ create mode 100644 3_variaveis/main.py
+ create mode 100644 3_variaveis/mainn.py
+ create mode 100644 4_operadores/main.py
+ create mode 100644 5_input/main.py
+-------------------------------------------------------
+Cria uma branch -- cria um diretório 
+git branch -M main 
+
+==> PS C:\Users\ead\PythonDeveloperQua491006\1_logica_programacao> git branch -M main
+
+-------------------------------------------------------
+VINCULAR O REPOSITORIO
+Envie um repositório existente a partir da linha de comando
+git remoto adicionar origem https://github.com/ale09carvalho/python_developer_qua_491_006.git
+
+
+PS C:\Users\ead\PythonDeveloperQua491006\1_logica_programacao> git remote add origin https://github.com/ale09carvalho/python_developer_qua_491_006.git
+
+================================================= 
+qdo fazer o 1º que usa o remote no posterior não usa remote
+
+------------------------------------------------
+o primeito precisa indecar para qual branch vai com -->  -u origin main
+git push -u origin main
+
+
+PS C:\Users\ead\PythonDeveloperQua491006\1_logica_programacao> git push -u origin main
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (13/13), 3.02 KiB | 1.01 MiB/s, done.
+Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ale09carvalho/python_developer_qua_491_006.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+================================================= 
+
+(.venv) PS C:\Users\ead\PythonDeveloperQua491006> git push -u origin main
+
+=================10/06/2025================================================================= 
+Como atualizar  projeto
+Como recuperar o projeto
+fazer o git clone
+======================================================
+
+vai dar erro ---
+iniciar --- digita credenciais aparecera 
+gerenciador de credenciais 
+credenciais do winsow remover 
+
+ssh -T git@github.com  
+
+-------------------------
+bibliotecas que geram gráficos
+pip install plotly
+pip install nbformat
+-------------------------
+
+git config --global --list
+git add . 
+git commit -m "mensagem "
+git push
+================================================================
+
+corrija o erro 'TextField' object has no attribute 'add' no código do arquivo aberto
+
+ANOTAÇAO
+:
+
+
+==> Para EXECUTAR  
+flet run imc_app
+
+====
+flet run --web imc app
+
+
+============================================================================
+Gera um executável
+instalar 2 arquivos
+
+https://icons8.com.br/
+
+
+pesquisa icons 
+imc
+baixar 
+
+instalar 
+ pip install pyinstaller pillow
+
+gerar o arquivo executalvel
+ flet pack imc_app/src/main.py
+
+PS C:\Users\ead\cienciadados\imc_app> flet pack src/main.py --name=imc_app --icon src/assets/lasanha.png
+
+========================================================================
+
