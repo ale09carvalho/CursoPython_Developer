@@ -14,9 +14,6 @@ vscode icon
 
 
 
-
-
-
 =======ANOTAÇAO==========  
 GITHUB REMOTO
 Um repositório contém todos os arquivos do projeto. 
