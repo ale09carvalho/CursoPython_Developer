@@ -8,21 +8,22 @@
 # entra de dados
 try:   
     while True:
-        RS_gasolina = float(input('Informe o valor da gasolina: R$ ').replace(',', '.'))
-        RS_etanol = float(input('Informe o valor do etanol: R$ ').replace(',', '.'))
+        gasolina = float(input('Informe o valor da gasolina: R$ ').replace(',', '.'))
+        etanol = float(input('Informe o valor do etanol: R$ ').replace(',', '.'))
 
         # calcula se o etanol é 70% do valor da gasolina
-        if RS_etanol <= (RS_gasolina * 0.7):
-            print('Atençao!! sugiro que você abastecer com Etanol.')
+        # utilizado o if else para verificar a condição
+        if etanol <= (gasolina * 0.7):
+            print('Atençao!! Sugiro que você abastecer com Etanol.')
         else:
             print('Atençao!! Sugiro que você abasteça com Gasolina!')
 
         # pergunta se deseja continuar
-        continuar = input('Deseja informar novos valores? (s/n): ').strip().lower()
+        continuar = input('Deseja informar novos valores? (s/n): ').strip().lower() # strip()/lower() remove espaços no início e no final, lower() converte para minúsculas
         if continuar != 's':
             break
 except Exception as e:
     print(f'Ocorreu um erro: {e}')
 finally:
-    print('Programa encerrado. Obrigado !')
+    print('Programa encerrado!')
 # Fim do programa
