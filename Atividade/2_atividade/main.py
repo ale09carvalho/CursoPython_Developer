@@ -10,36 +10,49 @@
 
  # NOTE - o usuario devera informar o encerrmamento do programa, ou seja, ele poderá repetir o calculo quantas vezes desejar.
 '''
-
 while True:
     try:
-        # entrada de dados
-        nome = input("Informe seu nome: ").strip()
+        # entrada de dnados
+        nome = input("Informe seu nome: "). title() .strip()
         peso = float(input("Informe o seu peso em Kg: ").replace(',', '.'))
         altura = float(input("Informe a sua altura em metros: ").replace(',', '.'))
-
         imc = peso / altura **2
+        
+        print(f"O valor do IMC de {nome} é {imc:.2f}. ")
+
         # Verifica se os valores são positivos antes de calcular o IMC
         if imc < 18.5:
-            print(f"{nome}, seu IMC é: {imc:.2f} - Voce esta abaixo do peso")
+            print(f"{nome} - Voce esta abaixo do peso")
         elif imc < 25:
-            print(f"{nome}, seu IMC é: {imc:.2f} - Voce esta no peso ideal")
+            print(f"{nome} -  Voce esta no peso ideal")
         elif imc < 30 :
-            print(f"{nome}, seu IMC é: {imc:.2f} - Voce esta acima do peso")
+            print(f"{nome} - Voce esta acima do peso")
         elif imc < 35:
-            print(f"{nome}, seu IMC é: {imc:.2f} - Voce esta com obeso")    
+            print(f"{nome}  - Voce esta com obeso")    
         elif imc < 40:
-            print(f"{nome}, seu IMC é: {imc:.2f} - Voce esta com obesidade nivel 2 ")
+            print(f"{nome}  - Voce esta com obesidade nivel 2 ")
         else:
-            print(f"{nome}, seu IMC é: {imc:.2f} - Voce esta com obesidade mórbida")
+            print(f"{nome}  - Voce esta com obesidade mórbida")
+        
+        while True:
         # Pergunta se o usuário deseja continuar
-        continuar = input("Deseja realizar outro cálculo? (s/n): ").strip().lower()
-        if continuar != 's':
-            print("Programa encerrado.")
-            break
+            prosseguir = input("Deseja realizar outro cálculo? (s/n): ").strip().lower()
+            if prosseguir == "s" or prosseguir == "n":
+                break
+            else:
+                print("Opção inválida.")
+                continue
+        match prosseguir:
+             case 's':
+                  continue
+             case 'n':
+                  print("Programa encerrado.")
+                  break
+             case _:
+                  print("Opção inválida. Programa encerrado.")
+                  continue
+    # Tratamento de exceções
     except Exception as e:
-        print(f"Erro ao calcular o IMC: {e}. Por favor, tente novamente.")
-        continue
-# Fim do programa
-
-
+            print(f"Erro ao calcular o IMC: {e}. Por favor, tente novamente.")
+            continue
+    # Fim do programa
